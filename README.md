@@ -1,6 +1,10 @@
 # ShopifyFall2021
 Shopify UI &amp; Web Dev Intern Challenge (Fall 2021)
 
+# Link to app
+
+https://floating-mesa-11748.herokuapp.com/
+
 # Set-Up
 ```
 1. git clone https://github.com/Emil-Ilnicki/ShopifyFall2021.git
