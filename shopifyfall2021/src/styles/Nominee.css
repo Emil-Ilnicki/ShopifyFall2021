@@ -1,0 +1,21 @@
+.nominee {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 20px;
+}
+
+.moviePoster {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  margin: auto;
+  transition-duration: 1s;
+}
+
+.moviePoster:hover {
+  width: 80%;
+  height: auto;
+}
