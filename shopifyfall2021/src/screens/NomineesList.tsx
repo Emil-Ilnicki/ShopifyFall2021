@@ -89,18 +89,23 @@ const NomineesList = () => {
         )}
       </div>
       <div className="btnContainer">
-        <Link to="/">
-          <button>Go Back</button>
-        </Link>
-        <button
-          onClick={() => {
-            handleChange();
-          }}
-        >
-          {" "}
-          Generate Link{" "}
-        </button>
-        <Modal showModal={showModal} setShowModal={setShowModal} />
+      {uuid === undefined ? (
+          <div>
+            {" "}
+            <Link to="/">
+              <button>Go Back</button>
+            </Link>
+            <button
+              onClick={() => {
+                handleChange();
+              }}
+            >
+              {" "}
+              Generate Link{" "}
+            </button>
+            <Modal showModal={showModal} setShowModal={setShowModal} />{" "}
+          </div>
+        ) : null}
       </div>
     </div>
   );

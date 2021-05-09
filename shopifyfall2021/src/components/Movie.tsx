@@ -31,8 +31,6 @@ const Movie = ({ ...props }: propData) => {
       if (res.msg !== "success") {
         console.error("Could not nominate record");
       }
-    } else {
-      window.alert("You have nominated 5 movies");
     }
   };
 

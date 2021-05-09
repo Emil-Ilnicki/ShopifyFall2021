@@ -5,7 +5,7 @@ import { router } from "./routes/routes";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
-const DBURL = process.env["MONGODB_URL"];
+const DBURL = // <Your connection URL here>;
 
 const app: express.Application = express();
 

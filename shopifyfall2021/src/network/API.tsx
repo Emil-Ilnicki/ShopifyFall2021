@@ -9,7 +9,7 @@ const defaultHeaders = () => {
 };
 
 export const moviedatabasecall = async (props: string) => {
-  console.log(process.env.REACT_APP_OMDB_API);
+  // PUT YOUR API KEY HERE
   return await fetch(
     `http://omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API}&type=movie&s=` +
       props

@@ -94,6 +94,13 @@ const MovieSearch = () => {
   const getNumNominees = () => {
     console.log(numNominated);
     if (numNominated > 4) {
+      const toastProperties = {
+        title: "Error",
+        description: "You have nominated 5 movies already!",
+        backgroundColor: "#d9534f",
+        icon: errorIcon,
+      };
+      setToastList([...toastList, toastProperties]);
       return false;
     } else {
       numNominated++;
