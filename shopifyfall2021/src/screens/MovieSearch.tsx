@@ -12,8 +12,8 @@ import Toast from "../components/Toast";
 // import successIcon from "../assets/check.svg";
 // #d9534f
 import errorIcon from "../assets/error.svg";
-// // #5bc0de
-// import infoIcon from "../assets/info.svg";
+// #5bc0de
+import infoIcon from "../assets/info.svg";
 // // #f0ad4e
 // import warningIcon from "../assets/warning.svg";
 
@@ -95,10 +95,10 @@ const MovieSearch = () => {
     console.log(numNominated);
     if (numNominated > 4) {
       const toastProperties = {
-        title: "Error",
+        title: "Info",
         description: "You have nominated 5 movies already!",
-        backgroundColor: "#d9534f",
-        icon: errorIcon,
+        backgroundColor: "#5bc0de",
+        icon: infoIcon,
       };
       setToastList([...toastList, toastProperties]);
       return false;
