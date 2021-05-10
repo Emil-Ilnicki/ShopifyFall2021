@@ -69,3 +69,47 @@ mongoose.connect(DBURL!, {
   useNewUrlParser: true,
 });
 ```
+
+# Goals
+Technical Requirements (TR)
+```
+1. Search results should come from OMDB's API (free API key:\http://www.omdbapi.com/apikey.aspx).
+2. Each search result should list at least its title, year of release and a button to nominate
+that film
+3. Updates to the search terms should update the result list
+4. Movies in search results can be added and removed from the nomination list
+5. If a search result has already been nominated, disable its nominate button
+6. Display a banner when the user has 5 nominations.
+```
+
+Extras (E)
+```
+1. Save nomination lists if the user leaves the page
+2. Animations for loading, adding/deleting movies, notifications
+3. Create shareable links
+```
+
+# ScreenShots
+The screen shots below will demonstrate how each of the above goals have been adressed 
+
+1. Users can search for a movie (TR: 1,2)
+![Search Results](https://github.com/Emil-Ilnicki/ShopifyFall2021/blob/main/ShopifyChallengeScreenshots/resultsaftersearch.png)
+2. Users can view their nominees and remove them (TR: 4)
+![Nominee List](https://github.com/Emil-Ilnicki/ShopifyFall2021/blob/main/ShopifyChallengeScreenshots/nomineelist.png)
+![Removed Nominee from list](https://github.com/Emil-Ilnicki/ShopifyFall2021/blob/main/ShopifyChallengeScreenshots/removednominee.png)
+3. Nominated movies will have their buttons disabled (TR: 5)
+![Disabled buttons for nominated movies](https://github.com/Emil-Ilnicki/ShopifyFall2021/blob/main/ShopifyChallengeScreenshots/nominatedmoviesdisabled.png)
+5. Notifcations will popup for certain events (invalid movie, > 5 nominations, etc...) (TR: 6, E: 2)
+![Nominated 5 movies]
+![Invalid Movie Title](https://github.com/Emil-Ilnicki/ShopifyFall2021/blob/main/ShopifyChallengeScreenshots/invalidmovietitle.png)
+![No movie enter](https://github.com/Emil-Ilnicki/ShopifyFall2021/blob/main/ShopifyChallengeScreenshots/searchbarchecking.png)
+![Too many results](https://github.com/Emil-Ilnicki/ShopifyFall2021/blob/main/ShopifyChallengeScreenshots/toomanyresultschecking.png)
+6. Skeletons will load in place while users are searching for a movie (E: 2)
+![Skeleton loading](https://github.com/Emil-Ilnicki/ShopifyFall2021/blob/main/ShopifyChallengeScreenshots/skeletonloading.png)
+7. Users nominations will be saved as they are stored within a MongoDB Atlas Cluster and are retrieved on render/re-renders  (E: 1)
+8. Users can get a sharable link via modal (E: 3)
+
+![Sharable Link](https://github.com/Emil-Ilnicki/ShopifyFall2021/blob/main/ShopifyChallengeScreenshots/sharablelinkmodal.png)
+![Shared Nominee List](https://github.com/Emil-Ilnicki/ShopifyFall2021/blob/main/ShopifyChallengeScreenshots/sharednomineelist.png)
+
+Other users will be able to view the list but not be able to make any changes to it
